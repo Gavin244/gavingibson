@@ -1,0 +1,80 @@
+<LinearLayout android:id="@+id/activity_category_list"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10"
+    >
+
+    <LinearLayout android:id="@+id/layout_items"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:orientation="vertical"
+        >
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview_all_list"
+            android:scrollbars="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:id="@+id/progressBar"
+            android:layout_gravity="center"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/layout_payment"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:background="@color/gen_white"
+        android:visibility="visible">
+        <Button android:id="@+id/sort_action_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:layout_gravity="center"
+            android:text="Sort"
+            android:textSize="14dp"
+            android:drawableStart="@drawable/sort_arrows_16dp"
+            android:drawableLeft="@drawable/sort_arrows_16dp"
+            android:textColor="@color/grey_dark1"
+            android:textStyle="bold"
+            style="?android:selectableItemBackground"
+            android:fontFamily="sans-serif"
+            android:gravity="center"/>
+        <View
+            android:layout_width="@dimen/view_width_small"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_small"
+            android:background="@color/grey_light" />
+
+        <Button android:id="@+id/filter_action_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:fontFamily="sans-serif"
+            android:drawableStart="@drawable/filter_16dp"
+            android:drawableLeft="@drawable/filter_16dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            style="@style/Animation.Design.BottomSheetDialog"
+            android:text="Filter"
+            android:textSize="14dp"
+            android:gravity="center"
+            android:textColor="@color/grey_dark1"
+            android:textStyle="bold"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+</LinearLayout>

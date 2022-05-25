@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "406271683918",
+    "firebase_url": "https://gexpress-7fa1d.firebaseio.com",
+    "project_id": "gexpress-7fa1d",
+    "storage_bucket": "gexpress-7fa1d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:406271683918:android:f596412ac2c66f5051421f",
+        "android_client_info": {
+          "package_name": "com.ggexpress.gavin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "406271683918-obom6fkaolh9bsjcp61eebl0t23dt3e2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ggexpress.gavin.startup",
+            "certificate_hash": "ab4613cc7ee22cf74335bff0a0fa66ef25bc1dcc"
+          }
+        },
+        {
+          "client_id": "406271683918-sfdgcotjbps079ev53n5q92vhk61q31f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6x4JAH9WTxJ7h8UxuHZCje91rc9o0LNw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "406271683918-sfdgcotjbps079ev53n5q92vhk61q31f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,23 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    tools:context="com.ggexpress.gavin.startup.OfferBannerFragment">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/iv_icon"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_centerInParent="true"
+            fresco:placeholderImage="@color/stay_color"/>
+
+    </RelativeLayout>
+
+</FrameLayout>

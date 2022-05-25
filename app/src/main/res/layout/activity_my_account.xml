@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ggexpress.gavin.options.MyAccountActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="40dp"
+            android:layout_centerHorizontal="true"
+            />
+
+        <TextView
+            android:id="@+id/profile_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profile_image"
+            android:layout_marginTop="@dimen/margin_small"
+            android:text=""
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textColor="@color/gen_black"
+            android:textSize="@dimen/text_size_large"
+        />
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/profile_name"
+            android:id="@+id/card_view_cart"
+            style="?android:animateOnClick"
+            android:background="?android:attr/selectableItemBackground"
+            app:cardElevation="1dp"
+            android:layout_marginTop="20dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#fff"
+                android:padding="16dp">
+                <ImageView
+                    android:src="@drawable/ic_shopping_cart_black_24dp"
+                    android:id="@+id/item_image1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/item_title1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/item_image1"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:text="Cart"
+                    />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/card_view_cart"
+            android:id="@+id/card_view_order"
+            app:cardElevation="1dp"
+            android:layout_marginTop="1dp"
+            style="?android:animateOnClick"
+            android:background="?android:attr/selectableItemBackground"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#fff"
+                android:padding="16dp">
+
+                <ImageView
+                    android:id="@+id/order_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_shopping_basket_black_24dp" />
+
+                <TextView
+                    android:id="@+id/item_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/order_image"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:text="Order" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/card_view_order"
+            android:id="@+id/card_view_setting"
+            app:cardElevation="1dp"
+            android:layout_marginTop="1dp"
+            style="?android:animateOnClick"
+            android:background="?android:attr/selectableItemBackground"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#fff"
+                android:padding="16dp">
+
+                <ImageView
+                    android:id="@+id/item_image2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/ic_menu_manage" />
+
+                <TextView
+                    android:id="@+id/item_title2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/item_image2"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:text="Settings" />
+
+
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/card_view_setting"
+            android:id="@+id/card_view_support"
+            app:cardElevation="1dp"
+            android:layout_marginTop="1dp"
+            style="?android:animateOnClick"
+            android:background="?android:attr/selectableItemBackground"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#fff"
+                android:padding="16dp">
+
+                <ImageView
+                    android:src="@drawable/ic_phone_black_24dp"
+                    android:id="@+id/item_image3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/item_title3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/item_image3"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:text="Support"
+                    />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/card_view_support"
+            android:id="@+id/card_view_wishlist"
+            app:cardElevation="1dp"
+            android:layout_marginTop="1dp"
+            style="?android:animateOnClick"
+            android:background="?android:attr/selectableItemBackground"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#fff"
+                android:padding="16dp">
+
+                <ImageView
+                    android:src="@drawable/ic_favorite_black_24dp"
+                    android:id="@+id/item_image4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/item_title4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/item_image4"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:text="My Wishlist"
+                    />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/logout_button"
+            android:text="Logout"
+            android:layout_width="match_parent"
+            style="?android:animateOnClick"
+            android:background="@color/gen_white"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/card_view_wishlist"
+            android:layout_marginEnd="32dp"
+            android:layout_marginStart="32dp"
+            android:textAllCaps="false"
+            android:textColor="@color/red_light"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="10dp"
+            />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

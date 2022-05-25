@@ -1,0 +1,20 @@
+<component name="libraryTable">
+  <library name="Gradle: com.merhold.extensiblepageindicator:extensiblepageindicator:1.0.1@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b23e4dbd9d459dbf3a043edbe575e602/jetified-extensiblepageindicator-1.0.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b23e4dbd9d459dbf3a043edbe575e602/jetified-extensiblepageindicator-1.0.1/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/b99fab9501d2994fbae9b3f26b3690db/transformed/jetified-extensiblepageindicator-1.0.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/b99fab9501d2994fbae9b3f26b3690db/transformed/jetified-extensiblepageindicator-1.0.1/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/b99fab9501d2994fbae9b3f26b3690db/transformed/jetified-extensiblepageindicator-1.0.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/cb51bfd4c93bf2f33f77800e43568119/transformed/jetified-extensiblepageindicator-1.0.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/cb51bfd4c93bf2f33f77800e43568119/transformed/jetified-extensiblepageindicator-1.0.1/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/cb51bfd4c93bf2f33f77800e43568119/transformed/jetified-extensiblepageindicator-1.0.1/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.merhold.extensiblepageindicator/extensiblepageindicator/1.0.1/ca1fb886727da209d2ac8ab6551df2f3ffb691a9/extensiblepageindicator-1.0.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.merhold.extensiblepageindicator/extensiblepageindicator/1.0.1/969a1a415281866c99f50184abc39c7575dcd359/extensiblepageindicator-1.0.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

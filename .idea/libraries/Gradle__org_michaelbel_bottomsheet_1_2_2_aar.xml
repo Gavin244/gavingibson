@@ -1,0 +1,25 @@
+<component name="libraryTable">
+  <library name="Gradle: org.michaelbel:bottomsheet:1.2.2@aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5f1cb834cf33418099575fd6a8235a1c/jetified-bottomsheet-1.2.2/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/bce46073d18c799a9e8f347f80bd5e82/transformed/jetified-bottomsheet-1.2.2/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/4322c5b9003f69afe5efa5e47ff7afe7/transformed/jetified-bottomsheet-1.2.2/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5f1cb834cf33418099575fd6a8235a1c/jetified-bottomsheet-1.2.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5f1cb834cf33418099575fd6a8235a1c/jetified-bottomsheet-1.2.2/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/bce46073d18c799a9e8f347f80bd5e82/transformed/jetified-bottomsheet-1.2.2/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/bce46073d18c799a9e8f347f80bd5e82/transformed/jetified-bottomsheet-1.2.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/bce46073d18c799a9e8f347f80bd5e82/transformed/jetified-bottomsheet-1.2.2/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/4322c5b9003f69afe5efa5e47ff7afe7/transformed/jetified-bottomsheet-1.2.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/4322c5b9003f69afe5efa5e47ff7afe7/transformed/jetified-bottomsheet-1.2.2/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/4322c5b9003f69afe5efa5e47ff7afe7/transformed/jetified-bottomsheet-1.2.2/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.michaelbel/bottomsheet/1.2.2/ff425b862da259a78a8fb7e395c9b15c085f4efe/bottomsheet-1.2.2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.michaelbel/bottomsheet/1.2.2/3f9a1b65438572bab9c73301222259fe56f0b93b/bottomsheet-1.2.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
