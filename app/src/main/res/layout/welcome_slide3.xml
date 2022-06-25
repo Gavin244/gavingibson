@@ -10,7 +10,7 @@
         android:layout_height="match_parent"
         android:foreground="@drawable/foreground_design"
         android:scaleType="fitXY"
-        android:src="@drawable/cardd">
+        android:src="@drawable/ecommerce">
 
     </ImageView>
 
