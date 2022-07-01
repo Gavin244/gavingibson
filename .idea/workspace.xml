@@ -14,18 +14,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="612a00e7-b77c-41bc-b394-1f42d2f69e3e" name="Default Changelist" comment="My project">
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ecommerce.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/shutters.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/shoppin.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/content_item_details.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/content_item_details.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/welcome_slide3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/welcome_slide3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ggexpress/gavin/backend/BackendServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ggexpress/gavin/backend/BackendServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ggexpress/gavin/backend/BackgroundReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ggexpress/gavin/backend/BackgroundReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ggexpress/gavin/backend/BackgroundService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ggexpress/gavin/backend/BackgroundService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ggexpress/gavin/cache/ImagePipelineConfigFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ggexpress/gavin/cache/ImagePipelineConfigFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ggexpress/gavin/entites/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ggexpress/gavin/entites/Address.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ggexpress/gavin/entites/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ggexpress/gavin/entites/Cart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ggexpress/gavin/entites/Frequently.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ggexpress/gavin/entites/Frequently.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ggexpress/gavin/entites/Generic.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ggexpress/gavin/entites/Generic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ggexpress/gavin/entites/ListingLite.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ggexpress/gavin/entites/ListingLite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ggexpress/gavin/entites/ListingParent.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ggexpress/gavin/entites/ListingParent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ggexpress/gavin/entites/Offer.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ggexpress/gavin/entites/Offer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ggexpress/gavin/entites/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ggexpress/gavin/entites/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ggexpress/gavin/entites/OrderQtyMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ggexpress/gavin/entites/OrderQtyMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ggexpress/gavin/entites/ParentType.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ggexpress/gavin/entites/ParentType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ggexpress/gavin/entites/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ggexpress/gavin/entites/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ggexpress/gavin/fragments/HackyViewPager.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ggexpress/gavin/fragments/HackyViewPager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\Admin\.android\avd\Pixel_2_Edited_API_30.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -89,12 +102,15 @@
     <setting file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-31/android/os/Binder.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectId" id="1bHL6kAMsICa2nb7ZCObt3qool8" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ApkExportedModule" value="app" />
     <property name="BundleExportedModule" value="app" />
     <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="dc2d22a8" />
@@ -302,7 +318,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653492187016</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="My project">
+      <created>1656184401854</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1656184401854</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -318,6 +341,7 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="My project" />
     <option name="LAST_COMMIT_MESSAGE" value="My project" />
   </component>
