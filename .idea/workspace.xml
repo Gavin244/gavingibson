@@ -19,7 +19,6 @@
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ggexpress/gavin/backend/BackendServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ggexpress/gavin/backend/BackendServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ggexpress/gavin/backend/BackgroundReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ggexpress/gavin/backend/BackgroundReceiver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ggexpress/gavin/backend/BackgroundService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ggexpress/gavin/backend/BackgroundService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ggexpress/gavin/cache/ImagePipelineConfigFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ggexpress/gavin/cache/ImagePipelineConfigFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ggexpress/gavin/entites/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ggexpress/gavin/entites/Address.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ggexpress/gavin/entites/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ggexpress/gavin/entites/Cart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ggexpress/gavin/entites/Frequently.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ggexpress/gavin/entites/Frequently.java" afterDir="false" />
@@ -31,7 +30,6 @@
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ggexpress/gavin/entites/OrderQtyMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ggexpress/gavin/entites/OrderQtyMap.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ggexpress/gavin/entites/ParentType.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ggexpress/gavin/entites/ParentType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ggexpress/gavin/entites/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ggexpress/gavin/entites/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ggexpress/gavin/fragments/HackyViewPager.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ggexpress/gavin/fragments/HackyViewPager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -325,7 +323,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656184401854</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="My project">
+      <created>1656656346743</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1656656346743</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
