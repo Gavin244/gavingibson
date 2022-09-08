@@ -7,7 +7,7 @@ import org.json.JSONObject;
  */
 
 public class ParentType {
-    public String pk, user, parentType, source, productPk, productName, productPrice, productDiscount, productDiscountedPrice, specifications;
+    public String GY, user, parentType, source, productGY, productName, productPrice, productDiscount, productDiscountedPrice, specifications;
     boolean approved;
     public String filesPk, filesLink, filesAttachment, filesMediaType;
     JSONObject jsonObject;

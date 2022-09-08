@@ -106,7 +106,7 @@ public class NewAddressActivity extends AppCompatActivity {
     }
 
     public void getAddress() {
-        client.get(BackendServer.url+"/api/ecommerce/address/?user="+ MainActivity.userPK, new JsonHttpResponseHandler() {
+        client.get(BackendServer.url+"/api/ecommerce/address/?user="+ MainActivity.userGY, new JsonHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONArray response) {
                 super.onSuccess(statusCode, headers, response);
@@ -218,7 +218,7 @@ public class NewAddressActivity extends AppCompatActivity {
         params.put("landMark", landMarkStr);
         params.put("country", countryStr);
         params.put("mobileNo", mobStr);
-        params.put("user", MainActivity.userPK);
+        params.put("user", MainActivity.userGY);
         params.put("lat", "");
         params.put("lon", "");
 
@@ -287,7 +287,7 @@ public class NewAddressActivity extends AppCompatActivity {
             holder.delAdd.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    deleteAdd(address.getPk());
+                    deleteAdd(address.getGY());
                 }
             });
         }

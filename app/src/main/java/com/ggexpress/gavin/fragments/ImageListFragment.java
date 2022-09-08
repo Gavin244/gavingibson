@@ -83,7 +83,7 @@ public class ImageListFragment extends Fragment {
         for (int i = 0; i<MainActivity.generics.size(); i++) {
             if (ImageListFragment.this.getArguments().getInt("type") == i + 1) {
                 Generic product = MainActivity.generics.get(i);
-                pk = product.getPk();
+                pk = product.getGY();
                 listingParents.clear();
                 progressBar.setVisibility(View.VISIBLE);
                 recyclerView.setVisibility(View.GONE);
@@ -227,10 +227,10 @@ public class ImageListFragment extends Fragment {
                             } else {
                                 RequestParams params = new RequestParams();
                                 params.put("prodSku", sku);
-                                params.put("product", parent.getPk());
+                                params.put("product", parent.getGY());
                                 params.put("qty", "1");
                                 params.put("typ", "cart");
-                                params.put("user", MainActivity.userPK);
+                                params.put("user", MainActivity.userGY);
                                 client.post(BackendServer.url + "/api/ecommerce/cart/", params, new AsyncHttpResponseHandler() {
                                     @Override
                                     public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
@@ -345,7 +345,7 @@ public class ImageListFragment extends Fragment {
                     } else {
                         String itemPrice = holder.itemPrice.getText().toString();
                         Intent intent = new Intent(mActivity, ItemDetailsActivity.class);
-                        intent.putExtra("listingLitePk", parent.getPk());
+                        intent.putExtra("listingLitePk", parent.getGY());
 //                        intent.putExtra(STRING_IMAGE_URI, parent.getFilesAttachment());
 //                        intent.putExtra(STRING_IMAGE_POSITION, position);
                         mActivity.startActivity(intent);
@@ -452,10 +452,10 @@ public class ImageListFragment extends Fragment {
                     } else {
                         if (holder.res) {
                             RequestParams params = new RequestParams();
-                            params.put("product", parent.getPk());
+                            params.put("product", parent.getGY());
                             params.put("qty", 1);
                             params.put("typ", "favourite");
-                            params.put("user", MainActivity.userPK);
+                            params.put("user", MainActivity.userGY);
                             client.post(BackendServer.url + "/api/ecommerce/cart/", params, new AsyncHttpResponseHandler() {
                                 @Override
                                 public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
@@ -484,10 +484,10 @@ public class ImageListFragment extends Fragment {
                             });
                         } else {
                             RequestParams params = new RequestParams();
-                            params.put("product", parent.getPk());
+                            params.put("product", parent.getGY());
                             params.put("qty", 0);
                             params.put("typ", "favourite");
-                            params.put("user", MainActivity.userPK);
+                            params.put("user", MainActivity.userGY);
                             client.post(BackendServer.url + "/api/ecommerce/cart/", params, new AsyncHttpResponseHandler() {
                                 @Override
                                 public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {

@@ -13,15 +13,15 @@ import java.util.ArrayList;
  */
 
 public class ListingLite {
-    public String pk, user, parentType, source, productPk, productName, productPrice, productDiscount, productDiscountedPrice, serialNo, howMuch, unit, specifications;
+    public String GY, user, parentType, source, productGY, productName, productPrice, productDiscount, productDiscountedPrice, serialNo, howMuch, unit, specifications;
     public String sku, updated, unitPerpack, created, price, parent_id, id;
     int productIntPrice, productIntDiscountedPrice;
     boolean approved, inStock;
     public String addedCart, addedWish;
-    public String parentPk, parentName;
-    public String parentTypePk, parentTypeName, parentTypeMinCost, parentTypeVisual;
-    public String fieldsPk, fieldsName, fieldsValue, fieldsType, fieldsHelpText, fieldsUnit, fieldsData;
-    public String filesPk, filesLink, filesAttachment, filesMediaType;
+    public String parentGY, parentName;
+    public String parentTypeGY, parentTypeName, parentTypeMinCost, parentTypeVisual;
+    public String fieldsGY, fieldsName, fieldsValue, fieldsType, fieldsHelpText, fieldsUnit, fieldsData;
+    public String filesGY, filesLink, filesAttachment, filesMediaType;
     JSONObject jsonObject;
     public JSONArray itemArray;
 
@@ -35,7 +35,7 @@ public class ListingLite {
         this.jsonObject = jsonObject;
 
         try {
-            this.pk = jsonObject.getString("pk");
+            this.GY = jsonObject.getString("GY");
             this.approved = jsonObject.getBoolean("approved");
             this.source = jsonObject.getString("source");
             this.addedCart = jsonObject.getString("added_cart");
@@ -45,7 +45,7 @@ public class ListingLite {
             this.specifications = str;
 
             JSONObject productObj = jsonObject.getJSONObject("product");
-            this.productPk = productObj.getString("pk");
+            this.productGY = productObj.getString("GY");
             this.user = productObj.getString("user");
             this.howMuch = productObj.getString("howMuch");
             this.serialNo = productObj.getString("serialNo");
@@ -78,7 +78,7 @@ public class ListingLite {
             } else {
                 for (int i = 0; i < filesArray.length(); i++) {
                     JSONObject filesObject = filesArray.getJSONObject(i);
-                    this.filesPk = filesObject.getString("pk");
+                    this.filesGY = filesObject.getString("GY");
                     this.filesLink = filesObject.getString("link");
                     String filesAttachment = filesObject.getString("attachment");
                     if (filesAttachment.equals("null") || filesAttachment.equals("") || filesAttachment == null) {
@@ -90,20 +90,20 @@ public class ListingLite {
             }
 
             JSONObject parentType = jsonObject.getJSONObject("parentType");
-            this.parentTypePk = parentType.getString("pk");
+            this.parentTypeGY = parentType.getString("GY");
             this.parentTypeName = parentType.getString("name");
             this.parentTypeMinCost = parentType.getString("minCost");
             this.parentTypeVisual = parentType.getString("visual");
 
             JSONObject parent = parentType.getJSONObject("parent");
             if (parent!=null) {
-                this.parentPk = parent.getString("pk");
+                this.parentGY = parent.getString("GY");
                 this.parentName = parent.getString("name");
             }
             JSONArray fields = parentType.getJSONArray("fields");
             for (int i=0; i<fields.length(); i++) {
                 JSONObject fieldsObject = fields.getJSONObject(i);
-                this.fieldsPk = fieldsObject.getString("pk");
+                this.fieldsGY = fieldsObject.getString("GY");
                 this.fieldsName = fieldsObject.getString("name");
                 this.fieldsValue = fieldsObject.getString("value");
                 this.fieldsType = fieldsObject.getString("fieldType");
@@ -133,12 +133,12 @@ public class ListingLite {
         }
     }
 
-    public String getPk() {
-        return pk;
+    public String getGY() {
+        return GY;
     }
 
-    public void setPk(String pk) {
-        this.pk = pk;
+    public void setGY(String GY) {
+        this.GY = GY;
     }
 
     public String getUser() {
@@ -173,12 +173,12 @@ public class ListingLite {
         this.inStock = inStock;
     }
 
-    public String getProductPk() {
-        return productPk;
+    public String getProductGY() {
+        return productGY;
     }
 
-    public void setProductPk(String productPk) {
-        this.productPk = productPk;
+    public void setProductGY(String productGY) {
+        this.productGY = productGY;
     }
 
     public String getProductName() {
@@ -245,12 +245,12 @@ public class ListingLite {
         this.approved = approved;
     }
 
-    public String getParentPk() {
-        return parentPk;
+    public String getParentGY() {
+        return parentGY;
     }
 
-    public void setParentPk(String parentPk) {
-        this.parentPk = parentPk;
+    public void setParentGY(String parentGY) {
+        this.parentGY = parentGY;
     }
 
     public String getParentName() {
@@ -261,12 +261,12 @@ public class ListingLite {
         this.parentName = parentName;
     }
 
-    public String getParentTypePk() {
-        return parentTypePk;
+    public String getParentTypeGY() {
+        return parentTypeGY;
     }
 
-    public void setParentTypePk(String parentTypePk) {
-        this.parentTypePk = parentTypePk;
+    public void setParentTypeGY(String parentTypeGY) {
+        this.parentTypeGY = parentTypeGY;
     }
 
     public String getParentTypeName() {
@@ -293,12 +293,12 @@ public class ListingLite {
         this.parentTypeVisual = parentTypeVisual;
     }
 
-    public String getFieldsPk() {
-        return fieldsPk;
+    public String getFieldsGY() {
+        return fieldsGY;
     }
 
-    public void setFieldsPk(String fieldsPk) {
-        this.fieldsPk = fieldsPk;
+    public void setFieldsGY(String fieldsGY) {
+        this.fieldsGY = fieldsGY;
     }
 
     public String getFieldsName() {
@@ -349,12 +349,12 @@ public class ListingLite {
         this.fieldsData = fieldsData;
     }
 
-    public String getFilesPk() {
-        return filesPk;
+    public String getFilesGY() {
+        return filesGY;
     }
 
-    public void setFilesPk(String filesPk) {
-        this.filesPk = filesPk;
+    public void setFilesGY(String filesPk) {
+        this.filesGY = filesPk;
     }
 
     public String getFilesLink() {

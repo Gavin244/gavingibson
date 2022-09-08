@@ -50,7 +50,7 @@ public class MyAccountActivity extends AppCompatActivity {
     SessionManager sessionManager;
     BackendServer backend;
     AsyncHttpClient client;
-    static int pk;
+    static int GY;
     File file1;
 
     @Override
@@ -70,7 +70,7 @@ public class MyAccountActivity extends AppCompatActivity {
                 Log.e("MainActivity","onSuccess");
                  try {
                     JSONObject usrObj = response.getJSONObject(0);
-                    pk = usrObj.getInt("pk");
+                    GY = usrObj.getInt("GY");
                     String username = usrObj.getString("username");
                     String firstName = usrObj.getString("first_name");
                     String lastName = usrObj.getString("last_name");

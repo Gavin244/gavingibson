@@ -158,7 +158,7 @@ public class OrderActivity extends AppCompatActivity {
     }
 
     public void getOrderHistory(){
-        client.get(this,BackendServer.url+"/api/ecommerce/order/?&Name__contains=&offset=0&user="+ MainActivity.userPK, new JsonHttpResponseHandler() {
+        client.get(this,BackendServer.url+"/api/ecommerce/order/?&Name__contains=&offset=0&user="+ MainActivity.userGY, new JsonHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONArray response) {
                 super.onSuccess(statusCode, headers, response);
@@ -233,7 +233,7 @@ public class OrderActivity extends AppCompatActivity {
         @Override
         public void onBindViewHolder(@NonNull ViewHolder viewHolder, final int i) {
             final Order order = orderArrayList.get(i);
-            viewHolder.orderId.setText("#"+order.getPk());
+            viewHolder.orderId.setText("#"+order.getGY());
             viewHolder.totalAmount.setText("Rs. "+order.getTotalAmount());
             viewHolder.approved.setText(order.getApproved());
             viewHolder.status.setText(order.getStatus());
@@ -246,7 +246,7 @@ public class OrderActivity extends AppCompatActivity {
                             .putExtra("address", order.getStreet()+"\n"+order.getLandMark()+"\n"+order.getCity()+", "
                                     +order.getState()+", "+order.getCountry()+", "+order.getPincode()+", "+order.getCountry()+"\n"+order.getMobileNo())
                     .putExtra("pos", i)
-                    .putExtra("pk", order.getPk()));
+                    .putExtra("GY", order.getGY()));
                 }
             });
 
@@ -254,7 +254,7 @@ public class OrderActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
 //                    new DownloadFile().execute("http://maven.apache.org/maven-1.x/maven.pdf", "maven.pdf");
-                    client.get(BackendServer.url+"/api/ecommerce/downloadInvoice/?value="+order.getPk(), new FileAsyncHttpResponseHandler(context) {
+                    client.get(BackendServer.url+"/api/ecommerce/downloadInvoice/?value="+order.getGY(), new FileAsyncHttpResponseHandler(context) {
                         @Override
                         public void onFailure(int statusCode, Header[] headers, Throwable throwable, File file) {
                             Toast.makeText(OrderActivity.this, "onFailure", Toast.LENGTH_SHORT).show();

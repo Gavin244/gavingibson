@@ -103,7 +103,7 @@ public class WishlistActivity extends AppCompatActivity {
     }
 
     public void getListItem() {
-        client.get(BackendServer.url+"/api/ecommerce/cart/?&Name__contains=&typ=favourite&user="+MainActivity.userPK,
+        client.get(BackendServer.url+"/api/ecommerce/cart/?&Name__contains=&typ=favourite&user="+MainActivity.userGY,
                 new JsonHttpResponseHandler() {
                     @Override
                     public void onSuccess(int statusCode, Header[] headers, JSONArray response) {
@@ -217,7 +217,7 @@ public class WishlistActivity extends AppCompatActivity {
                     Intent intent = new Intent(mContext, ItemDetailsActivity.class);
 //                    intent.putExtra(STRING_IMAGE_URI, cart.getListingParent().getFilesAttachment());
 //                    intent.putExtra(STRING_IMAGE_POSITION, position);
-                    intent.putExtra("listingLitePk", parent.getPk());
+                    intent.putExtra("listingLiteGY", parent.getGY());
                     mContext.startActivity(intent);
                 }
             });
@@ -252,7 +252,7 @@ public class WishlistActivity extends AppCompatActivity {
         public void moveCart(Cart cart) {
             RequestParams params = new RequestParams();
             params.put("typ", "cart");
-            client.patch(BackendServer.url+"/api/ecommerce/cart/"+ cart.getPk()+"/", params, new AsyncHttpResponseHandler() {
+            client.patch(BackendServer.url+"/api/ecommerce/cart/"+ cart.getGY()+"/", params, new AsyncHttpResponseHandler() {
                 @Override
                 public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
                     Toast.makeText(mContext, "onSuccess", Toast.LENGTH_SHORT).show();
@@ -267,17 +267,17 @@ public class WishlistActivity extends AppCompatActivity {
         }
 
         public void deleteItem(final Cart cart, final int position) {
-            client.delete(mContext, BackendServer.url + "/api/ecommerce/cart/"+ cart.getPk()+"/", new AsyncHttpResponseHandler() {
+            client.delete(mContext, BackendServer.url + "/api/ecommerce/cart/"+ cart.getGY()+"/", new AsyncHttpResponseHandler() {
                 @Override
                 public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
-                    Toast.makeText(mContext, "removed"+ cart.getPk(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(mContext, "removed"+ cart.getGY(), Toast.LENGTH_SHORT).show();
                     mContext.startActivity(new Intent(mContext, WishlistActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
                     notifyDataSetChanged();
                 }
 
                 @Override
                 public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
-                    Toast.makeText(mContext, "removing failure"+ cart.getPk(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(mContext, "removing failure"+ cart.getGY(), Toast.LENGTH_SHORT).show();
                 }
             });
         }

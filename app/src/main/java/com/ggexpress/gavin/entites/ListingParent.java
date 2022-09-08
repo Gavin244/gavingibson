@@ -11,11 +11,11 @@ import org.json.JSONObject;
  */
 
 public class ListingParent {
-    public String pk, user, parentType, source, productPk, productName, productPrice, productDiscount, productDiscountedPrice, serialNo, howMuch, unit,  specifications;
+    public String GY, user, parentType, source, productGY, productName, productPrice, productDiscount, productDiscountedPrice, serialNo, howMuch, unit,  specifications;
     public String sku, updated, unitPerpack, created, price, discountedPrice, parent_id, id;
     public int productIntPrice, productIntDiscountedPrice;
     public boolean approved, inStock;
-    public String filesPk, filesLink, filesAttachment, filesMediaType;
+    public String filesGY, filesLink, filesAttachment, filesMediaType;
     public String addedCart, addedWish;
     public JSONArray itemArray;
     JSONObject jsonObject;
@@ -25,7 +25,7 @@ public class ListingParent {
         this.jsonObject = jsonObject;
 
         try {
-            this.pk = jsonObject.getString("pk");
+            this.GY = jsonObject.getString("GY");
 
             this.approved = jsonObject.getBoolean("approved");
             this.parentType = jsonObject.getString("parentType");
@@ -35,7 +35,7 @@ public class ListingParent {
             this.inStock = jsonObject.getBoolean("in_stock");
 
             JSONObject productObj = jsonObject.getJSONObject("product");
-            this.productPk = productObj.getString("pk");
+            this.productGY = productObj.getString("GY");
             this.productName = productObj.getString("name");
             this.howMuch = productObj.getString("howMuch");
             this.serialNo = productObj.getString("serialNo");
@@ -74,7 +74,7 @@ public class ListingParent {
                 array = filesArray;
                 for (int i = 0; i < array.length(); i++) {
                     JSONObject filesObject = array.getJSONObject(i);
-                    this.filesPk = filesObject.getString("pk");
+                    this.filesGY = filesObject.getString("GY");
                     this.filesLink = filesObject.getString("link");
                     String filesAttachment = filesObject.getString("attachment");
                     if (filesAttachment.equals("null") || filesAttachment.equals("") || filesAttachment == null) {
@@ -99,12 +99,12 @@ public class ListingParent {
 
     }
 
-    public String getPk() {
-        return pk;
+    public String getGY() {
+        return GY;
     }
 
-    public void setPk(String pk) {
-        this.pk = pk;
+    public void setGY(String GY) {
+        this.GY = GY;
     }
 
     public String getUser() {
@@ -131,12 +131,12 @@ public class ListingParent {
         this.source = source;
     }
 
-    public String getProductPk() {
-        return productPk;
+    public String getProductGY() {
+        return productGY;
     }
 
-    public void setProductPk(String productPk) {
-        this.productPk = productPk;
+    public void setProductGY(String productGY) {
+        this.productGY = productGY;
     }
 
     public String getProductName() {
@@ -307,12 +307,12 @@ public class ListingParent {
         this.specifications = specifications;
     }
 
-    public String getFilesPk() {
-        return filesPk;
+    public String getFilesGY() {
+        return filesGY;
     }
 
-    public void setFilesPk(String filesPk) {
-        this.filesPk = filesPk;
+    public void setFilesGY(String filesGY) {
+        this.filesGY = filesGY;
     }
 
     public String getFilesLink() {

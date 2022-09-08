@@ -203,14 +203,14 @@ public class SearchResultActivity extends AppCompatActivity {
                     String type = product.getType();
                     if (type.equals("generic")) {
                         startActivity(new Intent(getApplicationContext(), AllItemsShowActivity.class)
-                                .putExtra("pk", product.getPk())
+                                .putExtra("GY", product.getGY())
                                 .putExtra("fragmentName", product.getName().toUpperCase()));
                     } else {
                         if (type.equals("list")) {
                             Intent intent = new Intent(getApplicationContext(), ItemDetailsActivity.class);
 //                            intent.putExtra(STRING_IMAGE_URI, cart.getListingParent().getFilesAttachment());
 //                            intent.putExtra(STRING_IMAGE_POSITION, position);
-                            intent.putExtra("listingLitePk", product.getPk());
+                            intent.putExtra("listingLiteGY", product.getGY());
                             startActivity(intent);
                         }
                     }

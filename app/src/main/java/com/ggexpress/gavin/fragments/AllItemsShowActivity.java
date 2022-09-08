@@ -358,10 +358,10 @@ public class AllItemsShowActivity extends AppCompatActivity {
                         public void onClick(View view) {
                                 RequestParams params = new RequestParams();
                                 params.put("prodSku", sku);
-                                params.put("product", parent.getPk());
+                                params.put("product", parent.getGY());
                                 params.put("qty", "1");
                                 params.put("typ", "cart");
-                                params.put("user", MainActivity.userPK);
+                                params.put("user", MainActivity.userGY);
                                 client.post(BackendServer.url + "/api/ecommerce/cart/", params, new AsyncHttpResponseHandler() {
                                     @Override
                                     public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
@@ -473,7 +473,7 @@ public class AllItemsShowActivity extends AppCompatActivity {
                     Intent intent = new Intent(mContext, ItemDetailsActivity.class);
 //                    intent.putExtra(STRING_IMAGE_URI, parent.getFilesAttachment());
 //                    intent.putExtra(STRING_IMAGE_POSITION, position);
-                    intent.putExtra("listingLitePk", parent.getPk());
+                    intent.putExtra("listingLiteGY", parent.getGY());
                     mContext.startActivity(intent);
                 }
             });
@@ -516,10 +516,10 @@ public class AllItemsShowActivity extends AppCompatActivity {
 //                                public void onClick(View view) {
 //                                    RequestParams params = new RequestParams();
 //                                    params.put("prodSku", sku);
-//                                    params.put("product", parent.getPk());
+//                                    params.put("product", parent.getGY());
 //                                    params.put("qty", "1");
 //                                    params.put("typ", "cart");
-//                                    params.put("user", MainActivity.userPK);
+//                                    params.put("user", MainActivity.userGY);
 //                                    client.post(BackendServer.url + "/api/ecommerce/cart/", params, new AsyncHttpResponseHandler() {
 //                                        @Override
 //                                        public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
@@ -582,7 +582,7 @@ public class AllItemsShowActivity extends AppCompatActivity {
                 public void onClick(View view) {
                     if (holder.res) {
                         RequestParams params = new RequestParams();
-                        params.put("product", parent.getPk());
+                        params.put("product", parent.getGY());
                         params.put("qty", "1");
                         params.put("typ", "favourite");
                         params.put("user", parent.getUser());
@@ -615,7 +615,7 @@ public class AllItemsShowActivity extends AppCompatActivity {
                         });
                     } else {
                         RequestParams params = new RequestParams();
-                        params.put("product", parent.getPk());
+                        params.put("product", parent.getGY());
                         params.put("qty", "0");
                         params.put("typ", "favourite");
                         params.put("user", parent.getUser());
@@ -635,7 +635,7 @@ public class AllItemsShowActivity extends AppCompatActivity {
 
                             @Override
                             public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
-                                Toast.makeText(mContext, "removing failure"+ parent.getPk(), Toast.LENGTH_SHORT).show();
+                                Toast.makeText(mContext, "removing failure"+ parent.getGY(), Toast.LENGTH_SHORT).show();
                             }
                         });
 
@@ -651,14 +651,14 @@ public class AllItemsShowActivity extends AppCompatActivity {
 
         public void updateItem(final String qty, final ListingParent parent, final ViewHolder holder) {
             RequestParams params = new RequestParams();
-            params.put("product", parent.getPk());
+            params.put("product", parent.getGY());
             params.put("qty", qty);
             params.put("typ", "cart");
-            params.put("user", MainActivity.userPK);
+            params.put("user", MainActivity.userGY);
             client.post(BackendServer.url + "/api/ecommerce/cart/", params, new AsyncHttpResponseHandler() {
                 @Override
                 public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
-                    Toast.makeText(mContext, "updated cart"+ parent.getPk(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(mContext, "updated cart"+ parent.getGY(), Toast.LENGTH_SHORT).show();
                     holder.itemsQuantity.setText(qty+"");
 //                    mActivity.startActivity(new Intent(mActivity, CartListActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
 
@@ -666,7 +666,7 @@ public class AllItemsShowActivity extends AppCompatActivity {
 
                 @Override
                 public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
-                    Toast.makeText(mContext, "failure cart"+ parent.getPk(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(mContext, "failure cart"+ parent.getGY(), Toast.LENGTH_SHORT).show();
                 }
             });
         }

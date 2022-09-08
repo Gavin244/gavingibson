@@ -11,10 +11,10 @@ import java.util.ArrayList;
  */
 
 public class Order {
-    public String pk, created, updated, totalAmount, paymentMode, paymentRefId, paymentChannel, modeOfShopping, paidAmount;
+    public String GY, created, updated, totalAmount, paymentMode, paymentRefId, paymentChannel, modeOfShopping, paidAmount;
     public String promoCode, status, approved,  landMark, street, city, region, pincode, country, mobileNo, promoDiscount;
     private boolean paymentStatus;//, refundStatus, cancellable;
-//    public String orderQtyPk, orderTrackingLog, orderProduct, orderQty, orderTotalAmount, orderStatus, orderUpdated, orderRefundAmount, orderDiscountAmount,
+//    public String orderQtyGY, orderTrackingLog, orderProduct, orderQty, orderTotalAmount, orderStatus, orderUpdated, orderRefundAmount, orderDiscountAmount,
 //    orderCourierName, orderCourierAWBNo, orderNotes, orderProductName, orderProductPrice, orderPpAfterDiscount;
 
     JSONObject jsonObject;
@@ -23,7 +23,7 @@ public class Order {
     public Order(JSONObject jsonObject) throws JSONException {
         this.jsonObject = jsonObject;
 
-        this.pk = jsonObject.getString("pk");
+        this.GY = jsonObject.getString("GY");
         this.created = jsonObject.getString("created");
         this.updated = jsonObject.getString("updated");
         this.totalAmount = jsonObject.getString("totalAmount");
@@ -56,7 +56,7 @@ public class Order {
             JSONObject object = jsonArray.getJSONObject(i);
             OrderQtyMap qtyMap = new OrderQtyMap(object);
             this.orderQtyMaps.add(qtyMap);
-//            this.orderQtyPk = object.getString("pk");
+//            this.orderQtyGY = object.getString("GY");
 //            this.orderTrackingLog = object.getString("trackingLog");
 //            this.orderProduct = object.getString("product");
 //            this.orderQty = object.getString("qty");
@@ -79,12 +79,12 @@ public class Order {
 
     }
 
-    public String getPk() {
-        return pk;
+    public String getGY() {
+        return GY;
     }
 
-    public void setPk(String pk) {
-        this.pk = pk;
+    public void setGY(String GY) {
+        this.GY = GY;
     }
 
     public String getCreated() {
@@ -240,12 +240,12 @@ public class Order {
         this.promoDiscount = promoDiscount;
     }
 
-//    public String getOrderQtyPk() {
-//        return orderQtyPk;
+//    public String getOrderQtyGY() {
+//        return orderQtyGY;
 //    }
 //
-//    public void setOrderQtyPk(String orderQtyPk) {
-//        this.orderQtyPk = orderQtyPk;
+//    public void setOrderQtyGY(String orderQtyGY) {
+//        this.orderQtyGY = orderQtyGY;
 //    }
 //
 //    public String getOrderTrackingLog() {

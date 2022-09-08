@@ -166,7 +166,7 @@ public class OrderDetailsActivity extends AppCompatActivity {
                             public void onClick(View view) {
                                 RequestParams params = new RequestParams();
                                 params.put("status", "cancelled");
-                                client.patch(BackendServer.url + "/api/ecommerce/orderQtyMap/" + map.getOrderQtyPk() + "/", params, new AsyncHttpResponseHandler() {
+                                client.patch(BackendServer.url + "/api/ecommerce/orderQtyMap/" + map.getOrderQtyGY() + "/", params, new AsyncHttpResponseHandler() {
                                     @Override
                                     public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
                                         Toast.makeText(OrderDetailsActivity.this, "Success", Toast.LENGTH_SHORT).show();
@@ -202,7 +202,7 @@ public class OrderDetailsActivity extends AppCompatActivity {
                             public void onClick(View view) {
                                 RequestParams params = new RequestParams();
                                 params.put("status", "returned");
-                                client.patch(BackendServer.url + "/api/ecommerce/orderQtyMap/" + map.getOrderQtyPk() + "/", params, new AsyncHttpResponseHandler() {
+                                client.patch(BackendServer.url + "/api/ecommerce/orderQtyMap/" + map.getOrderQtyGY() + "/", params, new AsyncHttpResponseHandler() {
                                     @Override
                                     public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
                                         Toast.makeText(OrderDetailsActivity.this, "Success", Toast.LENGTH_SHORT).show();
@@ -247,7 +247,7 @@ public class OrderDetailsActivity extends AppCompatActivity {
         }
 
         @Override
-        public void onBindViewHolder(@NonNull final ViewHolder viewHolder, final int i) {
+        public void onBindViewHolder(@NonNull final ViewHolder viewHolder,final int i) {
             final OrderQtyMap qtyMap = mQtyMaps.get(i);
             isSelected.add(i, false);
             isSelected.set(i, false);

@@ -98,7 +98,7 @@ public class CartListActivity extends AppCompatActivity implements DecreaseQuntI
 
 
     public void getItem() {
-        client.get(BackendServer.url+"/api/ecommerce/cart/?&typ=cart&user="+MainActivity.userPK,
+        client.get(BackendServer.url+"/api/ecommerce/cart/?&typ=cart&user="+MainActivity.userGY,
                 new JsonHttpResponseHandler() {
                     @Override
                     public void onSuccess(int statusCode, Header[] headers, JSONArray response) {
@@ -216,7 +216,7 @@ public class CartListActivity extends AppCompatActivity implements DecreaseQuntI
         }
 
         @Override
-        public void onBindViewHolder(final CartListActivity.CartListRecyclerViewAdapter.ViewHolder holder, final int position) {
+        public void onBindViewHolder(final CartListActivity.CartListRecyclerViewAdapter.ViewHolder holder,final int position) {
             final Cart cart = mCartlist.get(position);
             final ListingParent parent = cart.getParents().get(0);
             final Uri uri = Uri.parse(parent.getFilesAttachment());
@@ -279,7 +279,7 @@ public class CartListActivity extends AppCompatActivity implements DecreaseQuntI
                     Intent intent = new Intent(mContext, ItemDetailsActivity.class);
 //                    intent.putExtra(STRING_IMAGE_URI, cart.getListingParent().getFilesAttachment());
 //                    intent.putExtra(STRING_IMAGE_POSITION, position);
-                    intent.putExtra("listingLitePk", parent.getPk());
+                    intent.putExtra("listingLiteGY", parent.getGY());
                     mContext.startActivity(intent);
                 }
             });
@@ -362,14 +362,14 @@ public class CartListActivity extends AppCompatActivity implements DecreaseQuntI
         }
 
         public void deleteItem(final Cart cart, final int position) {
-            client.delete(mContext, BackendServer.url + "/api/ecommerce/cart/"+ cart.getPk()+"/", new AsyncHttpResponseHandler() {
+            client.delete(mContext, BackendServer.url + "/api/ecommerce/cart/"+ cart.getGY()+"/", new AsyncHttpResponseHandler() {
                 @Override
                 public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
                     int pos = mCartlist.indexOf(cart);
                     if (toast!= null) {
                         toast.cancel();
                     }
-                    toast = Toast.makeText(mContext,"removed "+ cart.getPk(), Toast.LENGTH_SHORT);
+                    toast = Toast.makeText(mContext,"removed "+ cart.getGY(), Toast.LENGTH_SHORT);
                     toast.show();
                     //Decrease notification count
                     MainActivity.notificationCountCart--;
@@ -388,7 +388,7 @@ public class CartListActivity extends AppCompatActivity implements DecreaseQuntI
                     if (toast!= null) {
                         toast.cancel();
                     }
-                    toast = Toast.makeText(mContext,"removing failure "+ cart.getPk(), Toast.LENGTH_SHORT);
+                    toast = Toast.makeText(mContext,"removing failure "+ cart.getGY(), Toast.LENGTH_SHORT);
                     toast.show();
                 }
             });
@@ -397,13 +397,13 @@ public class CartListActivity extends AppCompatActivity implements DecreaseQuntI
         public void updateItem(String qty, final Cart cart, int price) {
             RequestParams params = new RequestParams();
             params.put("qty", qty);
-            client.patch(BackendServer.url + "/api/ecommerce/cart/" + cart.getPk()+ "/", params, new AsyncHttpResponseHandler() {
+            client.patch(BackendServer.url + "/api/ecommerce/cart/" + cart.getGY()+ "/", params, new AsyncHttpResponseHandler() {
                 @Override
                 public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
                     if (toast!= null) {
                         toast.cancel();
                     }
-                    toast = Toast.makeText(mContext,"updated "+ cart.getPk(), Toast.LENGTH_SHORT);
+                    toast = Toast.makeText(mContext,"updated "+ cart.getGY(), Toast.LENGTH_SHORT);
                     toast.show();
 
 //                    mContext.startActivity(new Intent(mContext, CartListActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
@@ -411,7 +411,7 @@ public class CartListActivity extends AppCompatActivity implements DecreaseQuntI
 
                 @Override
                 public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
-                    Toast.makeText(mContext, "failure cart"+ cart.getPk(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(mContext, "failure cart"+ cart.getGY(), Toast.LENGTH_SHORT).show();
                 }
             });
         }
@@ -419,7 +419,7 @@ public class CartListActivity extends AppCompatActivity implements DecreaseQuntI
         public void moveList(Cart cart) {
             RequestParams params = new RequestParams();
             params.put("typ", "favourite");
-            client.patch(BackendServer.url+"/api/ecommerce/cart/"+ cart.getPk()+"/", params, new AsyncHttpResponseHandler() {
+            client.patch(BackendServer.url+"/api/ecommerce/cart/"+ cart.getGY()+"/", params, new AsyncHttpResponseHandler() {
                 @Override
                 public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
                     MainActivity.notificationCountCart--;

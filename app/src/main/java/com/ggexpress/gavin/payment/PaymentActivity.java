@@ -169,7 +169,7 @@ public class PaymentActivity extends AppCompatActivity {
             for (int i = 0; i < cardlist.size(); i++) {
                 Cart cart = cardlist.get(i);
                 JSONObject product = new JSONObject();
-                product.put("pk", Integer.parseInt(cart.getListingParent().getPk()));
+                product.put("GY", Integer.parseInt(cart.getListingParent().getGY()));
                 product.put("prodSku", cart.getProdSku());
                 product.put("qty", Integer.parseInt(cart.getQuantity()));
                 array.put(product);

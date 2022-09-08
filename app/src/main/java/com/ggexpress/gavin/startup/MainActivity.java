@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity
 
     public static int notificationCountCart = 0;
     public static String username = "";
-    public static String userPK;
+    public static String userGY;
     static ViewPager viewPager;
     static TabLayout tabLayout;
     BottomNavigationView navigationBottom;
@@ -274,7 +274,7 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-        client.get(BackendServer.url+"/api/ecommerce/cart/?&typ=cart&user="+MainActivity.userPK,
+        client.get(BackendServer.url+"/api/ecommerce/cart/?&typ=cart&user="+MainActivity.userGY,
                 new JsonHttpResponseHandler() {
                     @Override
                     public void onSuccess(int statusCode, Header[] headers, JSONArray response) {
@@ -311,7 +311,7 @@ public class MainActivity extends AppCompatActivity
             Bundle bundle = new Bundle();
             Generic product = generics.get(i);
             bundle.putInt("type", i+1);
-            bundle.putString("pk", product.getPk());
+            bundle.putString("GY", product.getGY());
             fragment.setArguments(bundle);
             adapter.addFragment(fragment, product.getName());
 
@@ -322,7 +322,7 @@ public class MainActivity extends AppCompatActivity
     public void getItems() {
         for (int i = 0; i< generics.size(); i++) {
             Generic product = generics.get(i);
-            client.get(BackendServer.url + "/api/ecommerce/listing/?parent=" + product.getPk() + "&recursive=1", new JsonHttpResponseHandler() {
+            client.get(BackendServer.url + "/api/ecommerce/listing/?parent=" + product.getGY() + "&recursive=1", new JsonHttpResponseHandler() {
                 @Override
                 public void onSuccess(int statusCode, Header[] headers, JSONArray response) {
                     super.onSuccess(statusCode, headers, response);
@@ -435,7 +435,7 @@ public class MainActivity extends AppCompatActivity
                 super.onSuccess(statusCode, headers, response);
                 try {
                     JSONObject usrObj = response.getJSONObject(0);
-                    userPK = usrObj.getString("pk");
+                    userGY = usrObj.getString("GY");
                     username = usrObj.getString("username");
                     String firstName = usrObj.getString("first_name");
                     String lastName = usrObj.getString("last_name");

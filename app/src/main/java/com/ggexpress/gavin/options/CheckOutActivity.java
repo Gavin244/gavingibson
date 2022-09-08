@@ -79,7 +79,7 @@ public class CheckOutActivity extends AppCompatActivity {
         }
     }
     public void getitem() {
-        client.get(BackendServer.url+"/api/ecommerce/address/?user="+ MainActivity.userPK, new JsonHttpResponseHandler() {
+        client.get(BackendServer.url+"/api/ecommerce/address/?user="+ MainActivity.userGY, new JsonHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONArray response) {
                 super.onSuccess(statusCode, headers, response);
@@ -145,7 +145,7 @@ public class CheckOutActivity extends AppCompatActivity {
         }
 
         @Override
-        public void onBindViewHolder(@NonNull final ViewHolder holder, final int position) {
+        public void onBindViewHolder(@NonNull final ViewHolder holder,int position) {
 
             final Address address = mAddresslist.get(position);
             holder.addresstxt.setText(address.getTitle()+"\n"+address.getStreet()+"\n"+address.getLandMark()+"\n"
@@ -156,7 +156,7 @@ public class CheckOutActivity extends AppCompatActivity {
                     pos=position;
                     startActivity(new Intent(mContext, PaymentActivity.class)
                             .putExtra("address", holder.addresstxt.getText().toString())
-                            .putExtra("pk", address.getPk())
+                            .putExtra("pk", address.getGY())
                             .putExtra("totalPrice", textAmount.getText().toString()));
                 }
             });

@@ -9,14 +9,14 @@ import org.json.JSONObject;
 
 public class OrderQtyMap {
     private boolean refundStatus, cancellable;
-    public String orderQtyPk, orderTrackingLog, orderProduct, orderQty, orderTotalAmount, orderStatus, orderUpdated, orderRefundAmount, orderDiscountAmount,
+    public String orderQtyGY, orderTrackingLog, orderProduct, orderQty, orderTotalAmount, orderStatus, orderUpdated, orderRefundAmount, orderDiscountAmount,
             orderCourierName, orderCourierAWBNo, orderNotes, orderProductName, orderProductPrice, orderPpAfterDiscount;
     JSONObject object;
 
     public OrderQtyMap(JSONObject jsonObject) throws JSONException {
         this.object = jsonObject;
 
-        this.orderQtyPk = object.getString("pk");
+        this.orderQtyGY = object.getString("GY");
         this.orderTrackingLog = object.getString("trackingLog");
         this.orderProduct = object.getString("product");
         this.orderQty = object.getString("qty");
@@ -52,12 +52,12 @@ public class OrderQtyMap {
         this.cancellable = cancellable;
     }
 
-    public String getOrderQtyPk() {
-        return orderQtyPk;
+    public String getOrderQtyGY() {
+        return orderQtyGY;
     }
 
-    public void setOrderQtyPk(String orderQtyPk) {
-        this.orderQtyPk = orderQtyPk;
+    public void setOrderQtyGY(String orderQtyGY) {
+        this.orderQtyGY = orderQtyGY;
     }
 
     public String getOrderTrackingLog() {

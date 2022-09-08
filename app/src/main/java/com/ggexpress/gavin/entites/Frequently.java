@@ -8,13 +8,13 @@ import org.json.JSONObject;
  */
 
 public class Frequently {
-    public String pk, created, user, questions, answer;
+    public String GY, created, user, questions, answer;
     public JSONObject object;
 
     public Frequently(JSONObject object) throws JSONException {
         this.object = object;
 
-        this.pk = object.getString("pk");
+        this.GY = object.getString("GY");
         this.created = object.getString("created");
         this.user = object.getString("user");
         this.questions = object.getString("ques");
@@ -22,11 +22,11 @@ public class Frequently {
     }
 
     public String getPk() {
-        return pk;
+        return GY;
     }
 
     public void setPk(String pk) {
-        this.pk = pk;
+        this.GY = GY;
     }
 
     public String getCreated() {

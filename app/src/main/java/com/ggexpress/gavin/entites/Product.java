@@ -8,24 +8,24 @@ import org.json.JSONObject;
  */
 
 public class Product {
-    public String pk, name, type;
+    public String GY, name, type;
     public JSONObject object;
 
     public Product(JSONObject object) throws JSONException {
         this.object = object;
 
-        this.pk = object.getString("pk");
+        this.GY = object.getString("GY");
         this.name = object.getString("name");
         this.type = object.getString("typ");
 
     }
 
-    public String getPk() {
-        return pk;
+    public String getGY() {
+        return GY;
     }
 
-    public void setPk(String pk) {
-        this.pk = pk;
+    public void setGY(String GY) {
+        this.GY = GY;
     }
 
     public String getName() {

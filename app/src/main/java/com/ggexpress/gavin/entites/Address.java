@@ -10,7 +10,7 @@ import java.util.ArrayList;
  */
 
 public class Address {
-    public String pk, user, name, city, street, region, buyerName, mobile, country, title, landMark, lat, lon;
+    public String GY, user, name, city, street, region, buyerName, mobile, country, title, landMark, lat, lon;
     boolean primary;
     ArrayList<String> addressList = new ArrayList<>();
     JSONObject object;
@@ -21,7 +21,7 @@ public class Address {
     public Address(JSONObject object) throws JSONException {
         this.object = object;
 
-        this.pk = object.getString("pk");
+        this.GY = object.getString("GY");
         this.user = object.getString("user");
         this.city = object.getString("city");
         this.street = object.getString("street");
@@ -81,12 +81,12 @@ public class Address {
         this.mobile = mobile;
     }
 
-    public String getPk() {
-        return pk;
+    public String getGY() {
+        return GY;
     }
 
-    public void setPk(String pk) {
-        this.pk = pk;
+    public void setGY(String GY) {
+        this.GY = GY;
     }
 
     public String getUser() {

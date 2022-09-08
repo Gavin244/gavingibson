@@ -123,7 +123,7 @@ public class BackgroundService extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         super.onStartCommand(intent, flags, startId);
-        intent = new Intent("com.cioc.libreerp.backendservice");
+        intent = new Intent("com.gg.libreerp.backendservice");
         sendBroadcast(intent);
         return START_STICKY;
     }

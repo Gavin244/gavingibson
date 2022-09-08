@@ -9,8 +9,8 @@ import org.json.JSONObject;
  */
 
 public class Offer {
-    public String pk, user, image, imagePortrait, created, level, title, subTitle;
-    public String pagePk, pageCreated, pageUpdated, pageurl, body, pageTitle;
+    public String GY, user, image, imagePortrait, created, level, title, subTitle;
+    public String pageGY, pageCreated, pageUpdated, pageurl, body, pageTitle;
     boolean active;
     JSONObject jsonObject;
 
@@ -21,7 +21,7 @@ public class Offer {
         this.jsonObject = jsonObject;
 
         try {
-            this.pk = jsonObject.getString("pk");
+            this.GY = jsonObject.getString("GY");
             this.active = jsonObject.getBoolean("active");
             this.created = jsonObject.getString("created");
             this.image = jsonObject.getString("image");
@@ -31,7 +31,7 @@ public class Offer {
             this.subTitle = jsonObject.getString("subtitle");
 //            this.state = jsonObject.getString("state");
             JSONObject page = jsonObject.getJSONObject("page");
-            this.pagePk = page.getString("pk");
+            this.pageGY = page.getString("GY");
             this.pageCreated = page.getString("created");
             this.pageUpdated = page.getString("updated");
             this.pageTitle = page.getString("title");
@@ -47,11 +47,11 @@ public class Offer {
     }
 
     public String getPk() {
-        return pk;
+        return GY;
     }
 
     public void setPk(String pk) {
-        this.pk = pk;
+        this.GY = GY;
     }
 
     public String getUser() {
@@ -118,12 +118,12 @@ public class Offer {
         this.active = active;
     }
 
-    public String getPagePk() {
-        return pagePk;
+    public String getPageGY() {
+        return pageGY;
     }
 
-    public void setPagePk(String pagePk) {
-        this.pagePk = pagePk;
+    public void setPageGY(String pageGY) {
+        this.pageGY = pageGY;
     }
 
     public String getPageCreated() {

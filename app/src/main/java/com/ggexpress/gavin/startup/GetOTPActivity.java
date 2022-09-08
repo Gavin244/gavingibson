@@ -47,7 +47,7 @@ public class GetOTPActivity extends AppCompatActivity {
     CheckBox termConCB;
     Button submitBtn;
     AsyncHttpClient client;
-    String pk, created, token, mobileOTP, emailOTP, email, mobile;
+    String GY, created, token, mobileOTP, emailOTP, email, mobile;
     String[] email1;
     private CookieStore httpCookieStore;
     SessionManager sessionManager;
@@ -72,7 +72,7 @@ public class GetOTPActivity extends AppCompatActivity {
         if (b!=null) {
             JSONObject response = RegistrationActivity.object;
             try {
-                pk = response.getString("pk");
+                GY = response.getString("GY");
                 created = response.getString("created");
                 token = response.getString("token");
                 mobileOTP = response.getString("mobileOTP");
@@ -168,11 +168,11 @@ public class GetOTPActivity extends AppCompatActivity {
             params.put("password", RegistrationActivity.passStr);
             params.put("rePassword", RegistrationActivity.confirmPassStr);
             params.put("token", token);
-            params.put("reg", pk);
+            params.put("reg", GY);
             params.put("agree", true);
             params.put("emailOTP", emailOtpStr);
             params.put("mobileOTP", mobOtpStr);
-            client.patch(BackendServer.url + "/api/homepage/registration/"+pk+"/", params, new AsyncHttpResponseHandler() {
+            client.patch(BackendServer.url + "/api/homepage/registration/"+GY+"/", params, new AsyncHttpResponseHandler() {
                 @Override
                 public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
                     Toast.makeText(GetOTPActivity.this, "submitted", Toast.LENGTH_SHORT).show();

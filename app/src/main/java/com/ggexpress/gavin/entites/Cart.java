@@ -11,8 +11,8 @@ import java.util.ArrayList;
  */
 
 public class Cart {
-    public String pk, user, quantity, type, prodSku, prodVarPrice, prod_howMuch;
-//            parentType, source, productPk, productName, productPrice, productDiscount, productDiscountedPrice, specifications;
+    public String GY, user, quantity, type, prodSku, prodVarPrice, prod_howMuch;
+//            parentType, source, productGY, productName, productPrice, productDiscount, productDiscountedPrice, specifications;
 //    boolean approved;
 //    public String filesPk, filesLink, filesAttachment, filesMediaType;
     JSONObject jsonObject;
@@ -23,7 +23,7 @@ public class Cart {
         this.jsonObject = jsonObject;
 
         try {
-            this.pk = jsonObject.getString("pk");
+            this.GY = jsonObject.getString("GY");
             this.user = jsonObject.getString("user");
             this.quantity = jsonObject.getString("qty");
             this.type = jsonObject.getString("typ");
@@ -68,12 +68,12 @@ public class Cart {
 
     }
 
-    public String getPk() {
-        return pk;
+    public String getGY() {
+        return GY;
     }
 
-    public void setPk(String pk) {
-        this.pk = pk;
+    public void setGY(String GY) {
+        this.GY = GY;
     }
 
     public String getUser() {

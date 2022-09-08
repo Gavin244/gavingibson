@@ -9,9 +9,9 @@ import org.json.JSONObject;
  */
 
 public class Generic {
-    public String pk, name, minCost, visual;
-    public String fieldPk, fieldName, fieldType, unit, helpText, fieldData, fieldDefault;
-    public String parentPk, parentName, parentMinCost, parentVisual;
+    public String GY, name, minCost, visual;
+    public String fieldGY, fieldName, fieldType, unit, helpText, fieldData, fieldDefault;
+    public String parentGY, parentName, parentMinCost, parentVisual;
 
     JSONObject object;
 
@@ -24,14 +24,14 @@ public class Generic {
         this.object = object;
 
         try {
-            this.pk = object.getString("pk");
+            this.GY = object.getString("GY");
             this.name = object.getString("name");
             this.minCost = object.getString("minCost");
             this.visual = object.getString("visual");
             JSONArray fields = object.getJSONArray("fields");
             for (int i=0; i<fields.length(); i++) {
                 JSONObject fieldsObject = fields.getJSONObject(i);
-                this.fieldPk = fieldsObject.getString("pk");
+                this.fieldGY = fieldsObject.getString("GY");
                 this.fieldName = fieldsObject.getString("name");
                 this.fieldType = fieldsObject.getString("fieldType");
                 this.fieldData = fieldsObject.getString("data");
@@ -41,7 +41,7 @@ public class Generic {
 
             JSONObject parent = object.getJSONObject("parent");
             if (parent!=null) {
-                this.parentPk = parent.getString("pk");
+                this.parentGY = parent.getString("GY");
                 this.parentName = parent.getString("name");
                 JSONObject parentObject = parent.getJSONObject("parent");
                 new Generic(parentObject);
@@ -53,12 +53,12 @@ public class Generic {
 
     }
 
-    public String getPk() {
-        return pk;
+    public String getGY() {
+        return GY;
     }
 
-    public void setPk(String pk) {
-        this.pk = pk;
+    public void setGY(String GY) {
+        this.GY = GY;
     }
 
     public String getName() {
@@ -85,12 +85,12 @@ public class Generic {
         this.visual = visual;
     }
 
-    public String getFieldPk() {
-        return fieldPk;
+    public String getFieldGY() {
+        return fieldGY;
     }
 
-    public void setFieldPk(String fieldPk) {
-        this.fieldPk = fieldPk;
+    public void setFieldGY(String fieldPk) {
+        this.fieldGY = fieldGY;
     }
 
     public String getFieldName() {
@@ -141,12 +141,12 @@ public class Generic {
         this.fieldDefault = fieldDefault;
     }
 
-    public String getParentPk() {
-        return parentPk;
+    public String getParentPGY() {
+        return parentGY;
     }
 
-    public void setParentPk(String parentPk) {
-        this.parentPk = parentPk;
+    public void setParentGY(String parentGY) {
+        this.parentGY = parentGY;
     }
 
     public String getParentName() {

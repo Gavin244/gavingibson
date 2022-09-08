@@ -65,7 +65,7 @@ public class ItemDetailsActivity extends AppCompatActivity {
     private ExtensiblePageIndicator extensiblePageIndicator;
     TextView textViewItemName, textViewItemPrice, textViewItemDiscountPrice, textViewItemDiscount;
     Button textViewAddToCart, textViewBuyNow;
-    String itemPk;
+    String itemGY;
     Spinner dropdownSpinner;
     RecyclerView suggestedRecyclerView;
     Context mContext;
@@ -95,7 +95,7 @@ public class ItemDetailsActivity extends AppCompatActivity {
         suggestList = new ArrayList<>();
 
         if (getIntent() != null) {
-            itemPk = getIntent().getStringExtra("listingLitePk");
+            itemGY = getIntent().getStringExtra("listingLiteGY");
         }
         getParentType();
 
@@ -262,10 +262,10 @@ public class ItemDetailsActivity extends AppCompatActivity {
                     public void onClick(View view) {
                         RequestParams params = new RequestParams();
                         params.put("prodSku", sku);
-                        params.put("product", lite.getPk());
+                        params.put("product", lite.getGY());
                         params.put("qty", "1");
                         params.put("type", "card");
-                        params.put("user", MainActivity.userPK);
+                        params.put("user", MainActivity.userGY);
                         client.post(BackendServer.url + "/api/ecommerce/cart/", params, new AsyncHttpResponseHandler() {
                             @Override
                             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
@@ -304,10 +304,10 @@ public class ItemDetailsActivity extends AppCompatActivity {
                 public void onClick(View view) {
                     RequestParams params = new RequestParams();
                     params.put("prodSku", sku);
-                    params.put("product", lite.getPk());
+                    params.put("product", lite.getGY());
                     params.put("qty", "1");
                     params.put("typ", "cart");
-                    params.put("user", MainActivity.userPK);
+                    params.put("user", MainActivity.userGY);
                     client.post(BackendServer.url + "/api/ecommerce/cart/", params, new AsyncHttpResponseHandler() {
                         @Override
                         public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
@@ -340,7 +340,7 @@ public class ItemDetailsActivity extends AppCompatActivity {
     }
 
     public void getParentType(){
-        client.get(BackendServer.url+"/api/ecommerce/listingLite/"+itemPk+"/", new JsonHttpResponseHandler() {
+        client.get(BackendServer.url+"/api/ecommerce/listingLite/"+itemGY+"/", new JsonHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                 super.onSuccess(statusCode, headers, response);
@@ -400,7 +400,7 @@ public class ItemDetailsActivity extends AppCompatActivity {
     }
 
     public void getSuggestedItem(){
-        client.get(BackendServer.url+"/api/ecommerce/listingLite/?parentValue="+lite.getParentTypePk()+"&detailValue="+lite.getPk(),
+        client.get(BackendServer.url+"/api/ecommerce/listingLite/?parentValue="+lite.getParentTypeGY()+"&detailValue="+lite.getGY(),
                 new JsonHttpResponseHandler() {
                     @Override
                     public void onSuccess(int statusCode, Header[] headers, JSONArray response) {
@@ -482,10 +482,10 @@ public class ItemDetailsActivity extends AppCompatActivity {
             lite = listingLites.get(0);
             item.setIcon(R.drawable.ic_favorite_red_24dp);
             RequestParams params = new RequestParams();
-            params.put("product", lite.getPk());
+            params.put("product", lite.getGY());
             params.put("qty", "1");
             params.put("type", "favourite");
-            params.put("user", MainActivity.userPK);
+            params.put("user", MainActivity.userGY);
             client.post(BackendServer.url + "/api/ecommerce/cart/", params, new AsyncHttpResponseHandler() {
                 @Override
                 public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
@@ -588,10 +588,10 @@ public class ItemDetailsActivity extends AppCompatActivity {
                             } else {
                                 RequestParams params = new RequestParams();
                                 params.put("prodSku", sku);
-                                params.put("product", parent.getPk());
+                                params.put("product", parent.getGY());
                                 params.put("qty", "1");
                                 params.put("typ", "cart");
-                                params.put("user", MainActivity.userPK);
+                                params.put("user", MainActivity.userGY);
                                 client.post(BackendServer.url + "/api/ecommerce/cart/", params, new AsyncHttpResponseHandler() {
                                     @Override
                                     public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
@@ -706,7 +706,7 @@ public class ItemDetailsActivity extends AppCompatActivity {
                         Intent intent = new Intent(mContext, ItemDetailsActivity.class);
 //                        intent.putExtra(STRING_IMAGE_URI, parent.getFilesAttachment());
 //                        intent.putExtra(STRING_IMAGE_POSITION, position);
-                        intent.putExtra("listingLitePk", parent.getPk());
+                        intent.putExtra("listingLiteGY", parent.getGY());
                         mContext.startActivity(intent);
                     }
                 }
@@ -766,10 +766,10 @@ public class ItemDetailsActivity extends AppCompatActivity {
                         if (holder.res) {
                             RequestParams params = new RequestParams();
                             params.put("prodSku", sku);
-                            params.put("product", parent.getPk());
+                            params.put("product", parent.getGY());
                             params.put("qty", 1);
                             params.put("typ", "favourite");
-                            params.put("user", MainActivity.userPK);
+                            params.put("user", MainActivity.userGY);
                             client.post(BackendServer.url + "/api/ecommerce/cart/", params, new AsyncHttpResponseHandler() {
                                 @Override
                                 public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
@@ -798,10 +798,10 @@ public class ItemDetailsActivity extends AppCompatActivity {
                             });
                         } else {
                             RequestParams params = new RequestParams();
-                            params.put("product", parent.getPk());
+                            params.put("product", parent.getGY());
                             params.put("qty", 0);
                             params.put("typ", "favourite");
-                            params.put("user", MainActivity.userPK);
+                            params.put("user", MainActivity.userGY);
                             client.post(BackendServer.url + "/api/ecommerce/cart/", params, new AsyncHttpResponseHandler() {
                                 @Override
                                 public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
